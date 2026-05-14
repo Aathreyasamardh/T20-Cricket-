@@ -1,64 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>T20pl - Cricket Game</title>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="stylesheet" href="style.css">
+  <title>T20pl Online Cricket</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
 
 <body>
 
-  <!-- LOADING SCREEN -->
+  <!-- LOADING -->
 
-  <div class="loading-screen" id="loadingScreen">
+  <div id="loadingScreen">
 
-    <div class="logo-area">
-      <h1>T20pl</h1>
-      <p>Ultimate Cricket Experience</p>
-    </div>
+    <h1>T20pl</h1>
 
-    <div class="loading-bar">
-      <div class="loading-fill"></div>
+    <p>Connecting To Stadium...</p>
+
+    <div class="loader">
+      <div class="loader-fill"></div>
     </div>
 
   </div>
 
-  <!-- MAIN MENU -->
+  <!-- TOP BAR -->
 
-  <section class="main-menu">
+  <header>
 
-    <div class="top-bar">
+    <div class="logo">
+      🏏 T20pl
+    </div>
 
-      <div class="profile-card">
-        <div class="avatar"></div>
+    <div class="online-status">
+      🟢 ONLINE
+    </div>
 
-        <div>
-          <h3>Player One</h3>
-          <p>Level 12</p>
-        </div>
+  </header>
+
+  <!-- MENU -->
+
+  <section class="menu-section">
+
+    <h1 class="game-title">
+      T20pl Cricket
+    </h1>
+
+    <p class="subtitle">
+      Realistic Cartoon Cricket Experience
+    </p>
+
+    <div class="menu-buttons">
+
+      <button onclick="startMatch()">
+        Quick Match
+      </button>
+
+      <button onclick="openMultiplayer()">
+        Multiplayer
+      </button>
+
+      <button onclick="showLiveScores()">
+        Live Scores
+      </button>
+
+      <button onclick="toggleNightMode()">
+        Day / Night
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- LIVE SCORE -->
+
+  <section
+    class="live-score-card"
+    id="liveScoreCard"
+  >
+
+    <div class="live-head">
+      🔴 LIVE MATCH
+    </div>
+
+    <h2>
+      Hyderabad Flames vs Chennai Kingsmen
+    </h2>
+
+    <div class="score-area">
+
+      <div>
+        <h3>HF</h3>
+        <p>182/4</p>
       </div>
 
-      <div class="coins-box">
-        🪙 4500
+      <div class="vs">
+        VS
+      </div>
+
+      <div>
+        <h3>CK</h3>
+        <p>178/8</p>
       </div>
 
     </div>
 
-    <div class="hero-section">
+    <p class="match-status">
+      Hyderabad Flames won by 4 runs
+    </p>
 
-      <div class="stadium-glow"></div>
+  </section>
 
-      <div class="main-title">
-        <h1>T20pl</h1>
-        <p>Realistic Cartoon Cricket Game</p>
+  <!-- STADIUM -->
+
+  <section class="stadium-section">
+
+    <div class="stadium">
+
+      <div class="crowd"></div>
+
+      <div class="field"></div>
+
+      <div class="pitch"></div>
+
+      <!-- BATSMAN -->
+
+      <div class="batsman">
+
+        <div class="head"></div>
+
+        <div class="body"></div>
+
+        <div class="bat"></div>
+
       </div>
 
-      <div class="menu-buttons">
+      <!-- BOWLER -->
+
+      <div class="bowler">
+
+        <div class="head"></div>
+
+        <div class="body"></div>
+
+      </div>
+
+      <!-- BALL -->
+
+      <div class="ball"></div>
+
+    </div>
+
+  </section>
+
+  <!-- SCOREBOARD -->
+
+  <section class="scoreboard">
+
+    <div class="score-box">
+
+      <h2 id="score">
+        0/0
+      </h2>
+
+      <p>
+        Overs:
+        <span id="overs">
+          0.0
+        </span>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTROLS -->
+
+  <section class="controls">
+
+    <button onclick="playShot()">
+      Play Shot
+    </button>
+
+    <button onclick="playDefense()">
+      Defend
+    </button>
+
+    <button onclick="changeLanguage()">
+      Commentary
+    </button>
+
+  </section>
+
+  <!-- COMMENTARY -->
+
+  <section class="commentary">
+
+    <h2>
+      🎙 Commentary
+    </h2>
+
+    <p id="commentaryText">
+      Welcome To T20pl Stadium!
+    </p>
+
+  </section>
+
+  <!-- MULTIPLAYER -->
+
+  <section
+    class="multiplayer-popup"
+    id="multiplayerPopup"
+  >
+
+    <h2>
+      Multiplayer Lobby
+    </h2>
+
+    <button onclick="createRoom()">
+      Create Room
+    </button>
+
+    <button onclick="joinRoom()">
+      Join Room
+    </button>
+
+    <button onclick="closePopup()">
+      Close
+    </button>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>      <div class="menu-buttons">
 
         <button class="main-btn">
           Quick Match
